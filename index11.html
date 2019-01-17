@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="RU">
+	<head>
+		<title>Карты MTG | Каталог</title>
+
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/script.js"></script>
+		<meta charset="UTF-8">
+		<meta name='viewport' content='width=device-width'>
+	</head>
+	<body>
+		<header class="d-flex flex-column">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container">
+					<a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+					<a class="mail d-none d-lg-flex align-items-center" href="mailto:mtg.sales@kts.by">mtg.sales@kts.by</a>
+					<ul class="navbar-nav ml-auto collapse navbar-collapse mr-3">
+						<li class="nav-item"><a href="#" class="nav-link">Новости</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Обмен</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Выкуп карт</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">О нас</a></li>
+					</ul>
+					<a href="#" class="btn btn-primary basket">Нет товаров</a>
+				</div>
+			</nav>
+			<div class="container flex-fill d-flex justify-content-end justify-content-lg-between align-items-center">
+				<ul class="nav d-none d-lg-flex">
+					<li class="nav-item"><a href="#" class="nav-link">Синглы MTG</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Наборы</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Бустеры</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Аксессуары</a></li>
+				</ul>
+				<form class="form-inline search">
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" placeholder="Введите название игры">
+						<div class="input-group-append">
+							<button class="btn btn-outline-gray" type="submit" id="inputGroupFileAddon04"><img src="img/search.png"></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</header>
+		<main>
+			<div class="container py-3">
+				<div class="border border-gray mb-3">
+					<form method="get" id="filtersForm">
+						<div class="d-flex flex-column flex-lg-row justify-content-between">
+							<div class="d-flex justify-content-between flex-column p-3">
+								<div>
+									<h2>Cеты</h2>
+									<div class="select-wrapper">
+										<select name="brand_id"  class="custom-select">
+											<option data-brand="" value="">Выберите сет</option>
+											<option value="19" data-brand="19">Magic 2011 Core Set</option>
+											<option value="24" data-brand="24">Magic 2012 Core Set</option>
+											<option value="23" data-brand="23">Magic 2013 Core Set</option>
+											<option value="22" data-brand="22">Magic Tenth Edition</option>
+											<option value="21" data-brand="21">Modern Masters 2013</option>
+											<option value="25" data-brand="25">Shadowmoor</option>
+										</select>
+									</div>
+								</div>
+								<div>
+									<a href="#" class="h2 cross">Очистить фильтр</a>
+								</div>
+							</div>
+							<div class="d-flex flex-wrap p-3 flex-column flex-lg-row">
+								<h2 class="w-100">Цвет:</h2>
+								<div class="pr-lg-3">
+									<div  class="form-check mt-0">
+										<input id="feature_160_0"  class="form-check-input"  type="checkbox" name="features[160][]" value="Land" data-feature="160" class="filterParam">
+										<label class="form-check-label land-icon" for="feature_160_0"><span class="mr-auto">Land</span></label>
+									</div>
+									<div  class="form-check">
+										<input id="feature_160_1"  class="form-check-input"  type="checkbox" name="features[160][]" value="Red" data-feature="160" class="filterParam">
+										<label class="form-check-label red-icon" for="feature_160_1"><span class="mr-auto">Red</span></label>
+									</div>
+									<div  class="form-check">
+										<input id="feature_160_2"  class="form-check-input"  type="checkbox" name="features[160][]" value="Сolorless" data-feature="160" class="filterParam">
+										<label class="form-check-label colorless-icon" for="feature_160_2"><span class="mr-auto">Сolorless</span></label>
+									</div>
+									<div  class="form-check">
+										<input id="feature_160_3"  class="form-check-input"  type="checkbox" name="features[160][]" value="White" data-feature="160" class="filterParam">
+										<label class="form-check-label white-icon" for="feature_160_3"><span class="mr-auto">White</span></label>
+									</div>
+								</div>
+								<div>
+									<div  class="form-check mt-0">
+										<input id="feature_160_4"  class="form-check-input"  type="checkbox" name="features[160][]" value="Blue" data-feature="160" class="filterParam">
+										<label class="form-check-label blue-icon" for="feature_160_4"><span class="mr-auto">Blue</span></label>
+									</div>
+									<div  class="form-check">
+										<input id="feature_160_5"  class="form-check-input"  type="checkbox" name="features[160][]" value="Green" data-feature="160" class="filterParam">
+										<label class="form-check-label green-icon" for="feature_160_5"><span class="mr-auto">Green</span></label>
+									</div>
+									<div  class="form-check">
+										<input id="feature_160_6"  class="form-check-input"  type="checkbox" name="features[160][]" value="Black" data-feature="160" class="filterParam">
+										<label class="form-check-label black-icon" for="feature_160_6"><span class="mr-auto">Black</span></label>
+									</div>
+									<div  class="form-check">
+										<input id="feature_160_7"  class="form-check-input"  type="checkbox" name="features[160][]" value="Multicolor" data-feature="160" class="filterParam">
+										<label class="form-check-label multicolor-icon" for="feature_160_7"><span class="mr-auto">Multicolor</span></label>
+									</div>
+								</div>
+							</div>
+							<div class="p-3">
+								<h2>Редкость:</h2>
+								<div  class="form-check">
+									<input id="feature_161_0"  class="form-check-input"  type="checkbox" name="features[161][]" value="Common" data-feature="161" class="filterParam">
+									<label class="form-check-label common-icon" for="feature_161_0"><span class="mr-auto">Common</span></label>
+								</div>
+								<div  class="form-check">
+									<input id="feature_161_1"  class="form-check-input"  type="checkbox" name="features[161][]" value="Mythic Rare" data-feature="161" class="filterParam">
+									<label class="form-check-label mythic-rare-icon" for="feature_161_1"><span class="mr-auto">Mythic Rare</label>
+								</div>
+								<div  class="form-check">
+									<input id="feature_161_2"  class="form-check-input"  type="checkbox" name="features[161][]" value="Rare" data-feature="161" class="filterParam">
+									<label class="form-check-label rare-icon" for="feature_161_2"><span class="mr-auto">Rare</span></label>
+								</div>
+								<div  class="form-check">
+									<input id="feature_161_3"   class="form-check-input"  type="checkbox" name="features[161][]" value="Uncommon" data-feature="161" class="filterParam">
+									<label class="form-check-label uncommon-icon" for="feature_161_3"><span class="mr-auto">Uncommon</span></label>
+								</div>
+							</div>
+							<div class="p-3">
+								<h2>Язык:</h2>
+								<div  class="form-check">
+									<input id="feature_162_0"  class="form-check-input"  type="checkbox" name="features[162][]" value="Английский" data-feature="162" class="filterParam">
+									<label class="form-check-label lng-en" for="feature_162_0"><span class="mr-auto">Английский</span></label>
+								</div>
+								<div  class="form-check">
+									<input id="feature_162_1"  class="form-check-input"  type="checkbox" name="features[162][]" value="Русский" data-feature="162" class="filterParam">
+									<label class="form-check-label lng-ru" for="feature_162_1"><span class="mr-auto">Русский</span></label>
+								</div>
+							</div>
+							<div class="p-3">
+								<h2>Foil:</h2>
+								<div  class="form-check">
+									<input id="feature_163_0"  class="form-check-input"  type="checkbox" name="features[163][]" value="Foil" data-feature="163" class="filterParam">
+									<label class="form-check-label" for="feature_163_0">Foil</label>
+								</div>
+								<div  class="form-check">
+									<input id="feature_163_1"  class="form-check-input"  type="checkbox" name="features[163][]" value="Non-Foil" data-feature="163" class="filterParam">
+									<label class="form-check-label" for="feature_163_1">Non-Foil</label>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<h1>Сингл карты MTG</h1>
+				<div class="row">
+					<div class="col-lg-2 col-md-4 col-6">
+						<img src="img/card-1.png">
+						<p class="my-2 text-center">Меч Тела и Духа<br>(RUS)(FOIL)</p>
+						<p class="d-flex justify-content-between align-items-center"><span class="text-blue">в наличии 1 шт.</span><span><span class="price">150</span> р</span></p>
+						<input class="count" type="text" value="1">
+						<p><a href="#" class="w-100 btn btn-primary">Заказать</a></p>
+					</div>
+					<div class="col-lg-2 col-md-4 col-6">
+						<img src="img/card-2.png">
+						<p class="my-2 text-center">Меч Тела и Духа<br>(RUS)(FOIL)</p>
+						<p class="d-flex justify-content-between align-items-center"><span class="text-blue">в наличии 1 шт.</span><span><span class="price">150</span> р</span></p>
+						<input class="count" type="text" value="1">
+						<p><a href="#" class="w-100 btn btn-primary">Заказать</a></p>
+					</div>
+					<div class="col-lg-2 col-md-4 col-6">
+						<img src="img/card-1.png">
+						<p class="my-2 text-center">Меч Тела и Духа<br>(RUS)(FOIL)</p>
+						<p class="d-flex justify-content-between align-items-center"><span class="text-blue">в наличии 1 шт.</span><span><span class="price">150</span> р</span></p>
+						<input class="count" type="text" value="1">
+						<p><a href="#" class="w-100 btn btn-primary">Заказать</a></p>
+					</div>
+					<div class="col-lg-2 col-md-4 col-6">
+						<img src="img/card-3.png">
+						<p class="my-2 text-center">Меч Тела и Духа<br>(RUS)(FOIL)</p>
+						<p class="d-flex justify-content-between align-items-center"><span class="text-blue">в наличии 1 шт.</span><span><span class="price">150</span> р</span></p>
+						<input class="count" type="text" value="1">
+						<p><a href="#" class="w-100 btn btn-primary">Заказать</a></p>
+					</div>
+					<div class="col-lg-2 col-md-4 col-6">
+						<img src="img/card-4.png">
+						<p class="my-2 text-center">Меч Тела и Духа<br>(RUS)(FOIL)</p>
+						<p class="d-flex justify-content-between align-items-center"><span class="text-blue">в наличии 1 шт.</span><span><span class="price">150</span> р</span></p>
+						<input class="count" type="text" value="1">
+						<p><a href="#" class="w-100 btn btn-primary">Заказать</a></p>
+					</div>
+					<div class="col-lg-2 col-md-4 col-6">
+						<img src="img/card-1.png">
+						<p class="my-2 text-center">Меч Тела и Духа<br>(RUS)(FOIL)</p>
+						<p class="d-flex justify-content-between align-items-center"><span class="text-blue">в наличии 1 шт.</span><span><span class="price">150</span> р</span></p>
+						<input class="count" type="text" value="1">
+						<p><a href="#" class="w-100 btn btn-primary">Заказать</a></p>
+					</div>
+					<div class="col-lg-2 col-md-4 col-6">
+						<img src="img/card-1.png">
+						<p class="my-2 text-center">Меч Тела и Духа<br>(RUS)(FOIL)</p>
+						<p class="d-flex justify-content-between align-items-center"><span class="text-blue">в наличии 1 шт.</span><span><span class="price">150</span> р</span></p>
+						<input class="count" type="text" value="1">
+						<p><a href="#" class="w-100 btn btn-primary">Заказать</a></p>
+					</div>
+					<div class="col-lg-2 col-md-4 col-6">
+						<img src="img/card-2.png">
+						<p class="my-2 text-center">Меч Тела и Духа<br>(RUS)(FOIL)</p>
+						<p class="d-flex justify-content-between align-items-center"><span class="text-blue">в наличии 1 шт.</span><span><span class="price">150</span> р</span></p>
+						<input class="count" type="text" value="1">
+						<p><a href="#" class="w-100 btn btn-primary">Заказать</a></p>
+					</div>
+					<div class="col-lg-2 col-md-4 col-6">
+						<img src="img/card-1.png">
+						<p class="my-2 text-center">Меч Тела и Духа<br>(RUS)(FOIL)</p>
+						<p class="d-flex justify-content-between align-items-center"><span class="text-blue">в наличии 1 шт.</span><span><span class="price">150</span> р</span></p>
+						<input class="count" type="text" value="1">
+						<p><a href="#" class="w-100 btn btn-primary">Заказать</a></p>
+					</div>
+					<div class="col-lg-2 col-md-4 col-6">
+						<img src="img/card-3.png">
+						<p class="my-2 text-center">Меч Тела и Духа<br>(RUS)(FOIL)</p>
+						<p class="d-flex justify-content-between align-items-center"><span class="text-blue">в наличии 1 шт.</span><span><span class="price">150</span> р</span></p>
+						<input class="count" type="text" value="1">
+						<p><a href="#" class="w-100 btn btn-primary">Заказать</a></p>
+					</div>
+					<div class="col-lg-2 col-md-4 col-6">
+						<img src="img/card-4.png">
+						<p class="my-2 text-center">Меч Тела и Духа<br>(RUS)(FOIL)</p>
+						<p class="d-flex justify-content-between align-items-center"><span class="text-blue">в наличии 1 шт.</span><span><span class="price">150</span> р</span></p>
+						<input class="count" type="text" value="1">
+						<p><a href="#" class="w-100 btn btn-primary">Заказать</a></p>
+					</div>
+					<div class="col-lg-2 col-md-4 col-6">
+						<img src="img/card-1.png">
+						<p class="my-2 text-center">Меч Тела и Духа<br>(RUS)(FOIL)</p>
+						<p class="d-flex justify-content-between align-items-center"><span class="text-blue">в наличии 1 шт.</span><span><span class="price">150</span> р</span></p>
+						<input class="count" type="text" value="1">
+						<p><a href="#" class="w-100 btn btn-primary">Заказать</a></p>
+					</div>
+				<div>
+			</div>
+		</main>
+		<footer class="border-top border-gray">
+			<div class="container my-3">
+				<div class="row justify-content-between align-items-center">
+					<div class="col-2 subscribe-icon">Подписывайтесь<br> на новости и акции</div>
+					<div class="mx-3">
+						<form class="form-inline subscribe">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="">
+								<button class="btn btn-primary" type="submit" id="inputGroupFileAddon04">Подписаться</button>
+							</div>
+						</form>
+					</div>
+					<a class="mail d-none d-lg-flex align-items-center flex-fill" href="mailto:mtg.sales@kts.by">mtg.sales@kts.by</a>
+					<div class="d-flex align-items-center">
+						<img src="img/ks-logo.png">
+						<small class="ml-3">продвижение и <br>разработака сайтов</small>
+					</div>
+				</div>
+				<div class="row mt-3">
+					<div class="col-2"><small>© 2010-2012 "KS"</small></div>
+					<div class="mx-3">
+						<p><strong class="text-primary">Компания</strong></p>
+						<p><a href="#">О компании</a></p>
+						<p><a href="#">Новости</a></p>
+					</div>
+					<div class="mx-3">
+						<p><strong class="text-primary">Информация</strong></p>
+						<p><a href="#">Оплата</a></p>
+						<p><a href="#">Доставка</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
